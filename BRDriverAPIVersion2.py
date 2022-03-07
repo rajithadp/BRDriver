@@ -69,7 +69,7 @@ toolData = pd.DataFrame([toolValues])
 toolData
 toolData.to_excel('test.xlsx')
 
-model = pickle.load(open('/media/rajitha/DC2CC1E62CC1BC30/academic/breast cancer study/brcaModelVersion3.pkcls','rb'))
+model = pickle.load(open('/PLEASE_CHANGE_THIS_PATH_WHERE_YOUR_FILE_IS_LOCATED/brcaModelVersion3.pkcls','rb'))
 data = Orange.data.Table('test.xlsx')
 print(model(data))
 

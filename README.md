@@ -8,5 +8,5 @@ P(HI) </br>
 GHIS </br>
 LoFtool </b></br>
 
-Here we are using opencravat API to get results easily from above mentioned tools. The API needs <b>Chromosome number, Variant position, Reference Base, Alternative Base</b> for giving results for each tool.
+Here we are using opencravat API to get results easily from above mentioned tools. The API needs <b>Chromosome number, Variant position, Reference Base, Alternative Base</b> for giving results for each tool. When you are using the script you have to manually changed these values.
   

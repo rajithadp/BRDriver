@@ -11,59 +11,26 @@ import pandas as pd
 import Orange
 import pickle
 
+_chrom = 'chr'+input('chromosome number')
+_pos = input('chromosome position')
+_ref_base = input('chromosome position')
+_alt_base = input('chromosome position')
 
-r=requests.get('https://run.opencravat.org/submit/annotate?chrom=chr10&pos=8073911&ref_base=-&alt_base=A&&annotators=mutpanning,aloft,chasmplus,prec,phi,ghis,loftool')
+_url = 'https://run.opencravat.org/submit/annotate?chrom=%s&pos=%s&ref_base=%s&alt_base=%s&&annotators=mutpanning,aloft,chasmplus,prec,phi,ghis,loftool'%(_chrom,_pos,_ref_base,_alt_base)
 
+r=requests.get(_url)
 rJson=r.json()
+
 toolValues = {'Mutpanning':0,'AloFT':0,'CHASMplus':0, 'P(rec)':0, 'P(HI)':0, 'GHIS':0, 'LoFtool':0}
- 
-if rJson['mutpanning'] is None:
-    toolValues['Mutpanning'] = 0
-    print(toolValues)
-else:
-    toolValues['Mutpanning'] = rJson["mutpanning"]["Max_Frequency"]
 
+toolValues['Mutpanning'] = rJson["mutpanning"]["Max_Frequency"] if rJson['mutpanning'] is not None else toolValues['Mutpanning'] 
+toolValues['AloFT'] = rJson["aloft"]["dominant"] if rJson['aloft'] is not None else toolValues['AloFT']
+toolValues['CHASMplus'] = rJson["chasmplus"]["score"] if rJson['chasmplus'] is not None else toolValues['CHASMplus']
+toolValues['P(rec)'] = rJson["prec"]["prec"] if rJson['prec'] is not None else toolValues['P(rec)']
+toolValues['P(HI)'] = rJson["phi"]["phi"] if rJson['phi'] is not None else toolValues['P(HI)']
+toolValues['GHIS'] = rJson["ghis"]["ghis"] if rJson['ghis'] is not None else toolValues['GHIS']
+toolValues['LoFtool'] = rJson["loftool"]["loftool_score"] if rJson['loftool'] is not None else toolValues['LoFtool']
 
-if rJson['aloft'] is None:
-    toolValues['AloFT'] = 0
-    print(toolValues)
-else:
-    toolValues['AloFT'] = rJson["aloft"]["dominant"]
-
-
-if rJson['chasmplus'] is None:
-    toolValues['CHASMplus'] = 0
-    print(toolValues)
-else:
-    toolValues['CHASMplus'] = rJson["chasmplus"]["score"]
-
-
-if rJson['prec'] is None:
-    toolValues['P(rec)'] = 0
-    print(toolValues)
-else:
-    toolValues['P(rec)'] = rJson["prec"]["prec"]
-
-
-if rJson['phi'] is None:
-    toolValues['P(HI)'] = 0
-    print(toolValues)
-else:
-    toolValues['P(HI)'] = rJson["phi"]["phi"]
-
-
-if rJson['ghis'] is None:
-    toolValues['GHIS'] = 0
-    print(toolValues)
-else:
-    toolValues['GHIS'] = rJson["ghis"]["ghis"]
-
-
-if rJson['loftool'] is None:
-    toolValues['LoFtool'] = 0
-    print(toolValues)
-else:
-    toolValues['LoFtool'] = rJson["loftool"]["loftool_score"]
 
 toolData = pd.DataFrame([toolValues])
 toolData

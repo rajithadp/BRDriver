@@ -40,4 +40,8 @@ model = pickle.load(open('/PLEASE_CHANGE_THIS_PATH_WHERE_YOUR_FILE_IS_LOCATED/br
 data = Orange.data.Table('test.xlsx')
 print(model(data))
 
+if model(data) == 1:
+    print('Your gene is a Breast Cancer Driver Gene')
+else:
+    print('Your gene is Not a Breast Cancer Driver Gene')
 

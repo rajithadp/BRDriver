@@ -11,10 +11,10 @@ import pandas as pd
 import Orange
 import pickle
 
-_chrom = 'chr'+input('chromosome number')
-_pos = input('chromosome position')
-_ref_base = input('chromosome position')
-_alt_base = input('chromosome position')
+_chrom = 'chr'+input('Chromosome Number: ')
+_pos = input('Chromosome Position: ')
+_ref_base = input('Reference Base: ')
+_alt_base = input('Alternative Base: ')
 
 _url = 'https://run.opencravat.org/submit/annotate?chrom=%s&pos=%s&ref_base=%s&alt_base=%s&&annotators=mutpanning,aloft,chasmplus,prec,phi,ghis,loftool'%(_chrom,_pos,_ref_base,_alt_base)
 

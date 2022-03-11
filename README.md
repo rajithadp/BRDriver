@@ -12,3 +12,6 @@ Here we are using opencravat API to get results easily from above mentioned tool
 
 ### BRDriver Interface
 ![alt text](https://github.com/rajithadp/BRDriver/blob/main/withoutData.png)
+
+Based on the given values BRDriver will give predictions.
+![alt text](https://github.com/rajithadp/BRDriver/blob/main/withData.png)

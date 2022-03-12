@@ -13,7 +13,8 @@ BRDRiver use [opencravat API](https://open-cravat.readthedocs.io/en/latest/API.h
 ### BRDriver Interface
 ![alt text](https://github.com/rajithadp/BRDriver/blob/main/beforeSubmit.png)
 
-Based on the given values BRDriver will give predictions.
+Based on the given values BRDriver will give predictions as follows.
+
 ![alt text](https://github.com/rajithadp/BRDriver/blob/main/afterSubmit.png)
 
 To work with this script you need to pre-install the following python packages

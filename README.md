@@ -8,7 +8,7 @@ P(HI) </br>
 GHIS </br>
 LoFtool </b></br>
 
-Here we are using opencravat API to get results easily from above mentioned tools. The API needs <b>Chromosome number, Variant position, Reference Base, Alternative Base</b> for giving results for each tool. BRDriver predict the given gene is a breast cancer driver gene or a passanger gene.
+BRDRiver use [opencravat API](https://open-cravat.readthedocs.io/en/latest/API.html) to get results easily from above mentioned tools. The API needs <b>Chromosome number, Variant position, Reference Base, Alternative Base</b> for giving results for each tool. BRDriver predict the given gene is a breast cancer driver gene or a passanger gene.
 
 ### BRDriver Interface
 ![alt text](https://github.com/rajithadp/BRDriver/blob/main/beforeSubmit.png)

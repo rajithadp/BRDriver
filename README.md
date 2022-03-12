@@ -15,3 +15,10 @@ Here we are using opencravat API to get results easily from above mentioned tool
 
 Based on the given values BRDriver will give predictions.
 ![alt text](https://github.com/rajithadp/BRDriver/blob/main/afterSubmit.png)
+
+To work with this script you need to pre-install the following python packages
+- PySimpleGUI
+- requests
+- pandas
+- Orange
+- pickle

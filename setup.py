@@ -9,7 +9,7 @@ setup(
     author_email='rajithadp@gmail.com',
     packages=find_packages('src'),
     package_dir={'': 'src'},
-    url='https://github.com/gmyrianthous/example-publish-pypi',
+    url='https://github.com/rajithadp/BRDriver',
     keywords='example project',
     install_requires=[
           'PySimpleGUI','requests','pandas','Orange','pickle',

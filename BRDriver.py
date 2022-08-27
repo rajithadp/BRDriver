@@ -40,7 +40,7 @@ while True:
     toolData = pd.DataFrame([toolValues])
 
     toolData.to_excel('test.xlsx')
-    model = pickle.load(open('/src/brcaModelVersion3.pkcls','rb'))
+    model = pickle.load(open('src/model/brcaModelVersion3.pkcls','rb'))
     data = Orange.data.Table('test.xlsx')
 
     result = model(data)

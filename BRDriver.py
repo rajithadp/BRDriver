@@ -6,17 +6,34 @@ import pandas as pd
 import Orange
 import pickle
 
-layout = [
-	[sg.Text('Chromosome Number',size=(30, 1),justification='right',font=("Arial",20),text_color='Blue',background_color='White'), sg.InputText('10',key='-Chr-',size=(10, 1),text_color='Black',background_color='White')],
-	[sg.Text('Chromosomal Position',size=(30, 1),justification='right',font=("Times New Roman",20),text_color='Blue',background_color='White'), sg.InputText('8073911',key='-Pos-',size=(10, 1),text_color='Black',background_color='White')],
-    [sg.Text('Reference Allele',size=(30, 1),justification='right',font=("Times New Roman",20),text_color='Blue',background_color='White'), sg.InputText('-',key='-Ref-',size=(10, 1),text_color='Black',background_color='White')],
-    [sg.Text('Alternative Allele',size=(30, 1),justification='right',font=("Times New Roman",20),text_color='Blue',background_color='White'), sg.InputText('A',key='-Alt-',size=(10, 1),text_color='Black',background_color='White')],
-    [sg.Text('',background_color='White')],
-    [sg.T(" "*66,background_color='White'),sg.Submit(font=("Times New Roman",20)), sg.Button('Clear',font=("Times New Roman",20))],
-    [sg.Text( key='-Result-', font=("Times New Roman",20),text_color='Black',background_color='White')]
-]
+sg.theme('DarkGrey7')
+font = ("Arial", 25)
 
-window = sg.Window("BRDriver",layout,size=(700, 300),grab_anywhere=True,background_color='White')
+layout = [
+	[
+	sg.Text('Chromosome Number',size=(20, 1),justification='right',font=font), 
+	sg.InputText('10',key='-Chr-',size=(10, 1),text_color='Black',background_color='White')
+	],
+	[
+	sg.Text('Chromosomal Position',size=(20, 1),justification='right',font=font), 
+	sg.InputText('8073911',key='-Pos-',size=(10, 1),text_color='Black',background_color='White')
+	],
+    	[
+    	sg.Text('Reference Allele',size=(20, 1),justification='right',font=font), 
+    	sg.InputText('-',key='-Ref-',size=(10, 1),text_color='Black',background_color='White')
+    	],
+    	[sg.Text('Alternative Allele',size=(20, 1),justification='right',font=font),
+    	sg.InputText('A',key='-Alt-',size=(10, 1),text_color='Black',background_color='White')
+    	],
+    	
+    	[
+    	sg.Submit(font=font), 
+    	sg.Button('Clear',font=font)
+    	],
+    	[sg.Text( key='-Result-',text_color='White',font=font)]
+	]
+
+window = sg.Window("BRDriver",layout,size=(1000, 300),grab_anywhere=True,element_justification='c')
 
 while True:
     event, values = window.read()

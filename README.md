@@ -1,5 +1,5 @@
 # BRDriver
-The BRDriver is a Machine Learning Model, Predicts the Breast Cancer Driver Genes. The model was built using the Random Forest machine learning algorithm and seven different gene prediction tools.
+The BRDriver is a Breast Cancer Driver Gene predictor. This Machine Learning Model was built using the Random Forest machine learning algorithm and seven different gene prediction tools.
 
 It based on
 - Mutpanning
@@ -18,7 +18,14 @@ If you havent got following packages you need to install them.
 - Orange
 - pickle
 
+Clone the repository and simply run the BRDriver.py python script by
+
+```
+Python3 BRDriver.py
+```
+
 # How it Works
+
 
 # How Model was built
 

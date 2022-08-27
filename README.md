@@ -21,5 +21,5 @@ If you havent got following packages you need to install them.
 # How it Works
 
 # How Model was built
-![ScreenShot](https://raw.githubusercontent.com/i-saumitra/Voice-controlled-MP3-Player/master/screenshot.jpg)
+
 ![ScreenShot](https://github.com/rajithadp/BRDriver/tree/main/src/images/BRDriver_model.png)

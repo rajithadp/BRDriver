@@ -21,4 +21,4 @@ If you havent got following packages you need to install them.
 # How it Works
 
 # How Model was built
-! (https://github.com/rajithadp/BRDriver/tree/main/src/images/BRDriver_model.png)
+! (/src/images/BRDriver_model.png)

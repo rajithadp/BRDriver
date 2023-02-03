@@ -25,7 +25,13 @@ Python3 BRDriver.py
 ```
 
 # How it Works
-
+- BRDriver is a GUI with various input fields and a submit button.
+- It waits for user input through the GUI.
+- When the submit button is pressed, it sends an HTTP GET request to an API with the values entered in the input fields.
+- It parses the JSON response from the API and stores certain values in a dictionary.
+- It converts the dictionary to a Pandas DataFrame, saves it to an excel file and loads a machine learning model.
+- The model is applied to the data and the result is displayed in the GUI.
+- If the result is 1, the GUI show that the gene is a breast cancer driver gene.
 
 # How Model was built
 
